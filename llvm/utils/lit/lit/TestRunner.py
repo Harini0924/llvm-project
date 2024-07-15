@@ -564,6 +564,16 @@ def executeBuiltinRm(cmd, cmd_shenv):
             exitCode = 1
     return ShellCommandResult(cmd, "", stderr.getvalue(), exitCode, False)
 
+def executeBuiltinUlimit(cmd, shenv):
+    if len(cmd.args) > 2:
+        raise InternalShellError(cmd, "'ulimit' supports at most two arguments")
+    if len(cmd.args) == 1:
+        stdout = ""
+    elif len(cmd.args) == 2:
+        stdout = cmd.args[1]
+    else:
+        raise InternalShellError(cmd, "'ulimit' requires at least one argument")
+    return ShellCommandResult(cmd, cmd.args[1], "", 0, False)
 
 def executeBuiltinColon(cmd, cmd_shenv):
     """executeBuiltinColon - Discard arguments and exit with status 0."""
@@ -720,6 +730,7 @@ def _executeShCmd(cmd, shenv, results, timeoutHelper):
         "pushd": executeBuiltinPushd,
         "rm": executeBuiltinRm,
         ":": executeBuiltinColon,
+        "ulimit": executeBuiltinUlimit,
     }
     # To avoid deadlock, we use a single stderr stream for piped
     # output. This is null until we have seen some output using
