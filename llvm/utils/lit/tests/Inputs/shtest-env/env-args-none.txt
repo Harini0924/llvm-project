@@ -1,1 +1,2 @@
-# RUN: env
+# RUN: env | FileCheck -check-prefix=ENV-CHECK
+# ENV-CHECK: {{^}}.*=.*{{.*}}

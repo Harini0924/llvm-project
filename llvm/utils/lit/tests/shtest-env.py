@@ -33,11 +33,12 @@
 # CHECK: # | Error: 'env' requires a subcommand
 # CHECK: # error: command failed with exit status: {{.*}}
 
-# CHECK: FAIL: shtest-env :: env-args-none.txt ({{[^)]*}})
+# CHECK: PASS: shtest-env :: env-args-none.txt ({{[^)]*}})
 # CHECK: env
 # CHECK: # executed command: env
-# CHECK: # | Error: 'env' requires a subcommand
-# CHECK: # error: command failed with exit status: {{.*}}
+# CHECK: {{^}}.*=.*{{.*}}
+# CHECK: --
+
 
 # CHECK: FAIL: shtest-env :: env-calls-cd.txt ({{[^)]*}})
 # CHECK: env -u FOO BAR=3 cd foobar

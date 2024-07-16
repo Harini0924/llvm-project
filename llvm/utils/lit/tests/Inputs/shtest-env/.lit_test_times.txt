@@ -1,0 +1,16 @@
+3.126144e-03 env-args-last-is-assign.txt
+3.117561e-03 env-args-last-is-u-arg.txt
+3.115654e-03 env-args-last-is-u.txt
+3.204823e-03 env-args-nested-none.txt
+3.156900e-03 env-args-none.txt
+-3.186941e-03 env-calls-cd.txt
+-3.169775e-03 env-calls-colon.txt
+-3.192902e-03 env-calls-echo.txt
+-4.768848e-03 env-calls-env.txt
+-3.135443e-03 env-calls-export.txt
+-3.172636e-03 env-calls-mkdir.txt
+-3.265381e-03 env-calls-not-builtin.txt
+-3.157854e-03 env-calls-rm.txt
+-4.426241e-03 env-u.txt
+-4.289865e-03 env.txt
+-4.291296e-03 mixed.txt
