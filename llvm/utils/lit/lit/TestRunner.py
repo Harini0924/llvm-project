@@ -573,7 +573,7 @@ def executeBuiltinUlimit(cmd, shenv):
         stdout = cmd.args[1]
     else:
         raise InternalShellError(cmd, "'ulimit' requires at least one argument")
-    return ShellCommandResult(cmd, cmd.args[1], "", 0, False)
+    return ShellCommandResult(cmd, stdout, "", 0, False)
 
 def executeBuiltinColon(cmd, cmd_shenv):
     """executeBuiltinColon - Discard arguments and exit with status 0."""
