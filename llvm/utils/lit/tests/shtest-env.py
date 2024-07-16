@@ -36,7 +36,7 @@
 # CHECK: PASS: shtest-env :: env-args-none.txt ({{[^)]*}})
 # CHECK: env
 # CHECK: # executed command: env
-# CHECK: {{^}}.*=.*{{.*}}
+# CHECK-NOT: {{^[^#]}}
 # CHECK: --
 
 
