@@ -33,13 +33,11 @@
 # CHECK-NOT: {{^[^#]}}
 # CHECK: --
 
-
 # CHECK: PASS: shtest-env :: env-args-none.txt ({{[^)]*}})
 # CHECK: env
 # CHECK: # executed command: env
 # CHECK-NOT: {{^[^#]}}
 # CHECK: --
-
 
 # CHECK: FAIL: shtest-env :: env-calls-cd.txt ({{[^)]*}})
 # CHECK: env -u FOO BAR=3 cd foobar
